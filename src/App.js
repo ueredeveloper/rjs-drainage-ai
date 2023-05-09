@@ -8,6 +8,7 @@ import MyMap from './components/commons/MyMap';
 import TopBar from './components/features/TopBar';
 import Analyse from './components/features/Analyse';
 import FootBar from './components/features/FootBar';
+import Grants from './components/features/Grants';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -67,6 +68,9 @@ function App() {
           <Analyse/>
           <WaterChart />
         </Box>
+      </Box>
+      <Box>
+        <Grants/>
       </Box>
       <Box className={classes.footer} >
         <FootBar/>
