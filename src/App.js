@@ -1,24 +1,77 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { Box } from '@material-ui/core';
+import LatLng from './components/commons/LatLng';
+import WellType from './components/commons/WellType';
+import WaterChart from './components/commons/WaterChart';
+import MyMap from './components/commons/MyMap';
+import TopBar from './components/features/TopBar';
+import Analyse from './components/features/Analyse';
+import FootBar from './components/features/FootBar';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    
+  },
+  topBox: {
+   
+    //backgroundColor: theme.palette.primary.main,
+  },
+  contentBox: {
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'row',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+    },
+  },
+  mapBox: {
+    flex: 1,
+    margin: 5,
+   // backgroundColor: theme.palette.secondary.main,
+    [theme.breakpoints.down('sm')]: {
+      flex: 1,
+    },
+  },
+  infoBox: {
+    flex: 1,
+    margin: 5,
+   // backgroundColor: theme.palette.secondary.light,
+    [theme.breakpoints.down('sm')]: {
+      flex: 1,
+    },
+  },
+  footer: {
+   // height: '100px',
+    backgroundColor: theme.palette.primary.dark,
+  },
+}));
 
 function App() {
+  const classes = useStyles();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box className={classes.root}>
+      <Box className={classes.topBox} >
+        <TopBar/>
+      </Box>
+      <Box className={classes.contentBox}>
+        <Box className={classes.mapBox} >
+          <MyMap apiKey={""} lat={37.7749} lng={-122.4194} zoom={10} />
+        </Box>
+        <Box className={classes.infoBox} >
+          <LatLng />
+          <WellType />
+          <Analyse/>
+          <WaterChart />
+        </Box>
+      </Box>
+      <Box className={classes.footer} >
+        <FootBar/>
+      </Box>
+    </Box>
   );
 }
 
