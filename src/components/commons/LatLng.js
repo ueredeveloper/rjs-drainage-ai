@@ -14,7 +14,7 @@ function LatLng() {
     return (
         <Box>
             <Typography style={{ margin: 5 }} >Coordenadas </Typography>
-            <Paper elevation={3} style={{ padding: 5 }}>
+            <Paper elevation={3} style={{ padding: 5, margin: 5 }}>
                 <Box display="flex" alignItems="center" sx={{ display: 'flex', justifyContent: 'space-around' }}>
                     <TextField label="Latitude" variant="standard" sx={{flexGrow: 1, marginRight: 2}} />
                     <TextField label="Longitude" variant="standard" sx={{flexGrow: 1, marginRight: 2}} />

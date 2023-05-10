@@ -22,7 +22,7 @@ function WellType() {
     return (
         <Box>
             <Typography style={{ margin: 5 }} >Tipo do Poço</Typography>
-            <Paper elevation={3} style={{ padding: 5 }}>
+            <Paper style={{ padding: 5, margin: 5 }}>
 
                 <RadioGroup row value={wellType} onChange={handleRadioChange} style={{ display: 'flex', justifyContent: 'space-around' }}>
                     <FormControlLabel value="manual" control={<Radio />} label="Manual / Tubular Raso" />

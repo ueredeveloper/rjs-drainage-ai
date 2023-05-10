@@ -25,7 +25,7 @@ function Analyse() {
     return (
         <div className={classes.tableWrapper}>
             <Typography style={{ margin: 5 }} >Análise de Disponibilidade </Typography>
-            <Paper elevation={3} style={{ padding: 5 }}>      
+            <Paper elevation={3} style={{ padding: 5, margin: 5 }}>      
                 <Table>
                 <TableHead>
                     <TableRow>

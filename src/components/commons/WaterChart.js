@@ -45,13 +45,13 @@ function WaterChart() {
     return (
         <Box>
             <Typography style={{ margin: 5 }}>Coordenadas </Typography>
-            <Paper elevation={3} style={{ padding: 5 }}>
+            <Paper style={{ padding: 5, margin: 5 }}>
                 <Box>
                     <Bar
                         data={data}
                         options={options}
-                        width={500}
-                        height={300}
+                        width={300}
+                        height={200}
                     />
                 </Box>
             </Paper>
